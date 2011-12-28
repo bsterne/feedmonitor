@@ -36,7 +36,7 @@ def filter(phrase, link):
             if word not in postWords:
                 alert = False
         if alert:
-            myQuery = "SELETC * FROM alerts WHERE link='%s';" % link
+            myQuery = "SELECT * FROM alerts WHERE link='%s';" % link
             if(c.execute(myQuery) == 0L):
                 if DEBUG:
                     print "New Link Found:", link
